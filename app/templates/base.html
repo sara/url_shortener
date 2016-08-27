@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html land = "en">
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "/static/css/base.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>URL Shortener</title> 
+  <link rel="stylesheet" href="/static/css/foundation.css">
+</head>
+<body>
+	{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<div class = "panel">
+	<h1>Put in your URL info here!</h1>
+<form action = "" method = "POST">
+original
+<input type = "text" name = "original">
+short
+<input type = "text" name = "short">
+<input type = "submit" value = "Submit">
+</form>
+</div>
+ <script src="/static/js/vendor/jquery.js"></script> 
+  <script src="/static/js/foundation.js"></script> 
+  <script> 
+    $(document).foundation(); 
+  </script> 
+</body>
+</html>
