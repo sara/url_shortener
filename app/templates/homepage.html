@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	{% block head %}
+	<link rel = "stylesheet" type = "text/css" href = "/static/css/homepage.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>URL Shortener</title> 
+  <link rel="stylesheet" href="/static/css/foundation.css">
+  {% endblock %}
+</head>
+<body>
+<div class = "panel">
+	{% block panel %}
+	<h1>Put in your URL info here!</h1>
+<form action = "" method = "POST">
+original
+<input type = "text" name = "original">
+short
+<input type = "text" name = "short">
+<input type = "submit" value = "Submit">
+</form>
+	{% endblock %}
+</div>
+</body>
+</html>

@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<head>
-</head>
-<body>
-<p>
-you fucked up. put in a real long url or a different short url
-</p>
-</body>
-</html>
+{% extends "homepage.html" %}
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block panel %}
+	<h1> Uh oh. Looks like something went wrong. Make sure your short url is unique and 10 characters or less. 
+	<h1>
+		<form action = "" method = 'POST'>
+	<input type = "submit" value = "Back">
+</form>
+{% endblock %}

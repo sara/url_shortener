@@ -16,10 +16,17 @@ def index():
 			
 			#return render_template("confirm.html", longurl = modified_long_url, shorturl = short_url)
 		else:
-			return render_template("error.html")
+			return redirect(url_for('.error'))#render_template("error.html")
 	
 	if request.method == 'GET':
-		return render_template("base.html")
+		return render_template("homepage.html")
+
+@app.route('/error', methods = ['GET', 'POST'])
+def error():
+	if request.method == 'POST':
+		return redirect(url_for('index'))
+	if request.method == 'GET':
+		return render_template('error.html')
 
 @app.route('/short/<website>', methods =['GET'])
 def shortcut(website):
