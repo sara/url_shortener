@@ -16,7 +16,7 @@ def index():
 		if modified_long_url != None and len(short_url) < 11:
 			new_url = Pairs(full = modified_long_url, short = short_url)
 			new_url.save()
-			return modified_long_url + " " + short_url
+			return render_template("confirm.html", shortie = short_url)#modified_long_url + " " + short_url
 		else:
 			return redirect(url_for('.error'))
 	
